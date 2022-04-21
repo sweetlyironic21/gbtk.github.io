@@ -1,0 +1,31 @@
+# This workflow will upload a Python Package using Twine when a release is created
+# For more information see: https://help.github.com/en/actions/language-and-framework-guides/using-python-with-github-actions#publishing-to-package-registries
+
+name: Unittest
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Install Library && OpenSSL
+      run: |
+        sudo apt-get install --only-upgrade openssl -y
+        python -m pip install --upgrade pip
+        python -m pip install flake8
+        python setup.py install --user
+    - name: Testing
+      run: |
+        python -m tiktok_downloader.test
+    - name: PEP8
+      run: |
+        flake8
