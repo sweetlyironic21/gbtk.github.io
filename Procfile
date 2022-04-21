@@ -1,1 +1,1 @@
-web: python -m tiktok_downloader --server --host=0.0.0.0 --port=${PORT}
+web: python -m grabtik --server --host=0.0.0.0 --port=${PORT}
