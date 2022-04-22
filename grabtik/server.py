@@ -19,9 +19,12 @@ app = Flask(
     static_folder=os.path.abspath(__file__+'/../static')
 )
 
+@app.route('/')
+def index():
+    return render_template('english.html')
 
 @app.route('/en')
-def index():
+def eng():
     return render_template('english.html')
 
 @app.route('/tr')
