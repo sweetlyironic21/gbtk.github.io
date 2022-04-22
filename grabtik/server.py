@@ -20,41 +20,77 @@ app = Flask(
 )
 
 
-@app.route('/')
+@app.route('/en')
 def index():
-    return render_template('index.html')
+    return render_template('english.html')
 
-@app.route('/tr/')
+@app.route('/tr')
 def tr():
     return render_template('turkish.html')
 
-@app.route('/ar/')
+@app.route('/ar')
 def ar():
     return render_template('arabic.html')
 
-@app.route('/es/')
+@app.route('/es')
 def es():
     return render_template('espanol.html')
 
-@app.route('/de/')
+@app.route('/de')
 def de():
     return render_template('german.html')
 
-@app.route('/id/')
+@app.route('/id')
 def indo():
     return render_template('indonesia.html')
 
-@app.route('/jp/')
+@app.route('/jp')
 def jp():
     return render_template('japanese.html')
 
-@app.route('/pl/')
+@app.route('/pl')
 def pl():
     return render_template('polish.html')
 
-@app.route('/ro/')
+@app.route('/ro')
 def ro():
     return render_template('romania.html')
+
+@app.route('/vn')
+def vn():
+    return render_template('vietnam.html')
+
+@app.route('/fr')
+def fr():
+    return render_template('french.html')
+
+@app.route('/th')
+def th():
+    return render_template('thailand.html')
+
+@app.route('/it')
+def it():
+    return render_template('italian.html')
+
+@app.route('/pt')
+def pt():
+    return render_template('portugese.html')
+
+@app.route('/ru')
+def ru():
+    return render_template('russian.html')
+
+@app.route('/ko')
+def ko():
+    return render_template('korean.html')
+
+@app.route('/gre')
+def gre():
+    return render_template('greek.html')
+
+@app.route('/du')
+def du():
+    return render_template('dutch.html')
 
 
 @app.route('/auto')
