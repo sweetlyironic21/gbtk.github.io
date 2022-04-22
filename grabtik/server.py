@@ -24,6 +24,38 @@ app = Flask(
 def index():
     return render_template('index.html')
 
+@app.route('/tr/')
+def tr():
+    return render_template('turkish.html')
+
+@app.route('/ar/')
+def ar():
+    return render_template('arabic.html')
+
+@app.route('/es/')
+def es():
+    return render_template('espanol.html')
+
+@app.route('/de/')
+def de():
+    return render_template('german.html')
+
+@app.route('/id/')
+def indo():
+    return render_template('indonesia.html')
+
+@app.route('/jp/')
+def jp():
+    return render_template('japanese.html')
+
+@app.route('/pl/')
+def pl():
+    return render_template('polish.html')
+
+@app.route('/ro/')
+def ro():
+    return render_template('romania.html')
+
 
 @app.route('/auto')
 def auto():
