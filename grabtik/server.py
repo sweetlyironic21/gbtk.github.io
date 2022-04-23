@@ -27,7 +27,7 @@ def index():
 def contact():
     return render_template('contact.html')
 
-@app.route('/terms-of-service')
+@app.route('/terms-of-use')
 def terms():
     return render_template('terms.html')
 
