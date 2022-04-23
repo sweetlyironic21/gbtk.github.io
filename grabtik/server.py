@@ -23,6 +23,22 @@ app = Flask(
 def index():
     return render_template('english.html')
 
+@app.route('/contact')
+def contact():
+    return render_template('contact.html')
+
+@app.route('/terms-of-service')
+def terms():
+    return render_template('terms.html')
+
+@app.route('/dmca')
+def dmca():
+    return render_template('dmca.html')
+
+@app.route('/privacy-policy')
+def privacy():
+    return render_template('privacy.html')
+
 @app.route('/en')
 def eng():
     return render_template('english.html')
