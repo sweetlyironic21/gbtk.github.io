@@ -63,7 +63,7 @@ def de():
 def indo():
     return render_template('indonesia.html')
 
-@app.route('/jp')
+@app.route('/ja')
 def jp():
     return render_template('japanese.html')
 
